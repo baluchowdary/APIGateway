@@ -15,8 +15,8 @@ public class LoggingFilter implements GlobalFilter{
 	private Logger logger = LoggerFactory.getLogger(LoggingFilter.class);
 	@Override
 	public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
-		System.out.println("Consol::i am from API Gateway- LoggerFilter :" +exchange.getRequest().getPath()); 
-		logger.info("i am from API Gateway- LoggerFilter :" +exchange.getRequest().getPath());
+		System.out.println("Consol::i am from LoggingFilter - filter - Rest URL :" +exchange.getRequest().getPath()); 
+		logger.info("i am from LoggingFilter - filter - Rest URL :" +exchange.getRequest().getPath());
 		
 		return chain.filter(exchange); 
 	}
