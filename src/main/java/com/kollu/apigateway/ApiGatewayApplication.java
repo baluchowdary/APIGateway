@@ -4,6 +4,9 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+
+import brave.sampler.Sampler;
 
 @SpringBootApplication
 public class ApiGatewayApplication {
@@ -14,6 +17,15 @@ public class ApiGatewayApplication {
 		System.out.println("Console:: ApiGatewayApplication i am from bank module");
 		logger.info("ApiGatewayApplication i am from bank module");
 		SpringApplication.run(ApiGatewayApplication.class, args);
+	}
+	
+/*Distributed Tracing/Zipkin*/
+	
+	@Bean
+	public Sampler defaultSampler() {
+		System.out.println("Console:: ApiGatewayApplication - defaultSampler method");
+		logger.info("ApiGatewayApplication - defaultSampler method");
+	    return Sampler.ALWAYS_SAMPLE;
 	}
 
 }
