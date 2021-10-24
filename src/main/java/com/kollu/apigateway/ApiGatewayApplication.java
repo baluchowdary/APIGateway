@@ -4,9 +4,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
-
-import brave.sampler.Sampler;
 
 @SpringBootApplication
 public class ApiGatewayApplication {
@@ -21,11 +18,11 @@ public class ApiGatewayApplication {
 	
 /*Distributed Tracing/Zipkin*/
 	
-	@Bean
+	/*@Bean
 	public Sampler defaultSampler() {
 		System.out.println("Console:: ApiGatewayApplication - defaultSampler method");
 		logger.info("ApiGatewayApplication - defaultSampler method");
 	    return Sampler.ALWAYS_SAMPLE;
-	}
+	}*/
 
 }
