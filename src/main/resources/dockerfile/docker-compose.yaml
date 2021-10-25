@@ -1,0 +1,16 @@
+version: '3.5'
+
+services:
+  apigateway:
+    image: kolludocker/apigateway-apigateway:0.0.1-phase3
+    mem_limit: 1024m
+    ports:
+      - "8765:8765"
+    networks:
+      - apigateway-network
+    environment:
+      - TZ="Asia/Kolkata"
+      
+networks:
+  apigateway-network:
+  
