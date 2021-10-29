@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.kollu.apigateway</groupId>
 	<artifactId>apigateway</artifactId>
-	<version>0.0.3-phase4</version>
+	<version>0.0.1-phase4</version>
 	<name>APIGateway</name>
 	<description>Spring APIGateway for Microservices</description>
 	<properties>
